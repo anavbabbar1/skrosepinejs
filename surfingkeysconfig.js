@@ -25,6 +25,9 @@ settings.theme = `
     background: #232136;
     color: #e0def4;
   }
+  input {
+    font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font';
+  }
   .sk_theme input {
     color: #e0def4;
   }
