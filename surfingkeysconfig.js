@@ -16,7 +16,7 @@ api.Hints.setCharacters('asdfghjklwertpoiuvbcn');
 // blurb: All natural pine, faux fur and a bit of soho vibes for the classy minimalist
 
 const hintsCss =
-  "font-size: 13pt; font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', monospace; border: 0px; color: #e0def4 !important; background: #232136; background-color: #232136";
+  "font-size: 13pt; font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font'; border: 0px; color: #e0def4 !important; background: #232136; background-color: #232136";
 api.Hints.style(hintsCss);
 api.Hints.style(hintsCss, "text");
 
@@ -65,7 +65,7 @@ settings.theme = `
   body {
     margin: 0;
 
-    font-family: 'JetBrains Mono','JetBrainsMonoNL Nerd Font', monospace;
+    font-family: 'JetBrains Mono','JetBrainsMonoNL Nerd Font';
     font-size: 12px;
   }
   #sk_omnibar {
@@ -272,7 +272,7 @@ settings.theme = `
     white-space: nowrap;
     display: inline-block;
     padding: 3px 5px;
-    font: 11px 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', monospace;
+    font: 11px 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font';
     line-height: 10px;
     vertical-align: middle;
     border: solid 1px #56526e;
