@@ -16,7 +16,7 @@ api.Hints.setCharacters('asdfghjklwertpoiuvbcn');
 // blurb: All natural pine, faux fur and a bit of soho vibes for the classy minimalist
 
 const hintsCss =
-  "font-size: 13pt; font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font'; border: 0px; color: #e0def4 !important; background: #232136; background-color: #232136";
+  "font-size: 13pt; font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular'; border: 0px; color: #e0def4 !important; background: #232136; background-color: #232136";
 api.Hints.style(hintsCss);
 api.Hints.style(hintsCss, "text");
 
