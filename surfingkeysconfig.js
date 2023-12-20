@@ -26,7 +26,7 @@ settings.theme = `
     color: #e0def4;
   }
   input {
-    font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font';
+    font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
   }
   .sk_theme input {
     color: #e0def4;
@@ -68,7 +68,7 @@ settings.theme = `
   body {
     margin: 0;
 
-    font-family: 'JetBrains Mono','JetBrainsMonoNL Nerd Font';
+    font-family: 'JetBrains Mono','JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
     font-size: 12px;
   }
   #sk_omnibar {
@@ -275,7 +275,7 @@ settings.theme = `
     white-space: nowrap;
     display: inline-block;
     padding: 3px 5px;
-    font: 11px 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font';
+    font: 11px 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
     line-height: 10px;
     vertical-align: middle;
     border: solid 1px #56526e;
