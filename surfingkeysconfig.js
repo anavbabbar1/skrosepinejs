@@ -9,6 +9,7 @@ settings.hintAlign = "left";
 settings.tabsThreshold = 0;
 api.Hints.setCharacters('asdfghjklwertpoiuvbcn');
 
+settings.blockListPattern = /.*docs.google.com.*/i;
 // name: Rosé Pine Moon
 // author: thuanowa
 // license: unlicense
