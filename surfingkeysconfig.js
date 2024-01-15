@@ -1,5 +1,5 @@
-api.map('J', 'E'); // Switch tab - left
-api.map('K', 'R'); // Switch tab - right
+api.map('K', 'E'); // Switch tab - left
+api.map('J', 'R'); // Switch tab - right
 api.map('F', 'cf'); // Open hints in new tab
 api.map('H', 'S'); // Go back in history
 api.map('L', 'D'); // Go forward in history
