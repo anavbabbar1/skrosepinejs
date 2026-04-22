@@ -24,7 +24,7 @@ settings.blockListPattern = /.*docs.google.com.*/i;
 const hintsCss =
   "font-size: 12pt; font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular'; " +
   "border: 0px; color: #f0eeff !important; " +
-  "background: rgba(40, 36, 62, 0.82); " +
+  "background: rgba(40, 36, 62, 0.72); " +
   "backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); " +
   "border-radius: 4px; padding: 1px 4px;";
 api.Hints.style(hintsCss);
@@ -39,7 +39,7 @@ settings.theme = `
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
   }
   input {
-    font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
+    font-family: 'SF Pro','JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
   }
   .sk_theme input {
     color: #e2e0f0;
@@ -83,7 +83,7 @@ settings.theme = `
   /* ── Body ───────────────────────────────────────────────── */
   body {
     margin: 0;
-    font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
+    font-family: 'SF Pro', 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
     font-size: 12px;
   }
 
@@ -95,7 +95,7 @@ settings.theme = `
     max-height: 80%;
     left: 16%;
     text-align: left;
-    background: rgba(24, 22, 36, 0.76);
+    background: rgba(24, 22, 36, 0.72);
     backdrop-filter: blur(28px) saturate(1.5);
     -webkit-backdrop-filter: blur(28px) saturate(1.5);
     border: 1px solid rgba(255, 255, 255, 0.09);
@@ -218,7 +218,7 @@ settings.theme = `
     z-index: 2147483000;
     padding: 4px 10px 0 10px;
     border-radius: 8px 8px 0 0;
-    background: rgba(24, 22, 36, 0.80);
+    background: rgba(24, 22, 36, 0.72);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255,255,255,0.08);
