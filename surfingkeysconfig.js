@@ -24,7 +24,7 @@ settings.blockListPattern = /.*docs.google.com.*/i;
 const hintsCss =
   "font-size: 12pt; font-family: 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular'; " +
   "border: 0px; color: #f0eeff !important; " +
-  "background: rgba(40, 36, 62, 0.72); " +
+  "background: rgba(40, 36, 62, 0.82); " +
   "backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); " +
   "border-radius: 4px; padding: 1px 4px;";
 api.Hints.style(hintsCss);
@@ -33,13 +33,13 @@ api.Hints.style(hintsCss, "text");
 settings.theme = `
   /* ── Base ───────────────────────────────────────────────── */
   .sk_theme {
-    background: rgba(26, 24, 38, 0.78);
+    background: rgba(26, 24, 38, 0.72);
     color: #e2e0f0;
     backdrop-filter: blur(20px) saturate(1.4);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
   }
   input {
-    font-family: 'SF Pro','JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
+    font-family: 'SF Pro', 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
   }
   .sk_theme input {
     color: #e2e0f0;
@@ -56,7 +56,7 @@ settings.theme = `
     border-color: rgba(255, 255, 255, 0.12);
   }
   .sk_theme .frame {
-    background: rgba(36, 33, 54, 0.82);
+    background: rgba(36, 33, 54, 0.72);
   }
   .sk_theme .omnibar_highlight {
     color: #e88fc7;  /* pink — only for matched text */
@@ -84,7 +84,7 @@ settings.theme = `
   body {
     margin: 0;
     font-family: 'SF Pro', 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
-    font-size: 12px;
+    font-size: 16px;
   }
 
   /* ── Omnibar ────────────────────────────────────────────── */
@@ -115,14 +115,14 @@ settings.theme = `
   }
   #sk_omnibarSearchArea .prompt, #sk_omnibarSearchArea .resultPage {
     display: inline-block;
-    font-size: 18px;
+    font-size: 24px;
     width: auto;
   }
   #sk_omnibarSearchArea>input {
     display: inline-block;
     width: 100%;
     flex: 1;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 0;
     padding: 0 0 0 0.5rem;
     background: transparent;
@@ -136,10 +136,10 @@ settings.theme = `
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
   .sk_omnibar_middle #sk_omnibarSearchArea {
-    margin: 0.6rem 1.1rem;
+    margin: 1rem 1.5rem;
   }
   .sk_omnibar_bottom #sk_omnibarSearchArea {
-    margin: 0.25rem 1.1rem;
+    margin: 0.5rem 1.5rem;
   }
   .sk_omnibar_middle #sk_omnibarSearchResult>ul {
     margin-top: 0;
@@ -159,11 +159,12 @@ settings.theme = `
     padding: 0;
   }
   #sk_omnibarSearchResult>ul>li {
-    padding: 0.25rem 0;
+    padding: 0.5rem 0.5rem;
     display: block;
     max-height: 600px;
     overflow-x: hidden;
     overflow-y: auto;
+    font-size: 14px;
   }
   .sk_theme #sk_omnibarSearchResult>ul>li:nth-child(odd) {
     background: rgba(255, 255, 255, 0.025);
@@ -216,18 +217,18 @@ settings.theme = `
     bottom: 0;
     right: 20%;
     z-index: 2147483000;
-    padding: 4px 10px 0 10px;
+    padding: 7px 16px 3px 16px;
     border-radius: 8px 8px 0 0;
-    background: rgba(24, 22, 36, 0.72);
+    background: rgba(24, 22, 36, 0.80);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255,255,255,0.08);
     border-bottom: none;
-    font-size: 12px;
+    font-size: 15px;
     color: #e2e0f0;
   }
   #sk_status>span {
-    line-height: 16px;
+    line-height: 22px;
   }
 
   /* ── Rich hints ─────────────────────────────────────────── */
@@ -254,7 +255,7 @@ settings.theme = `
     outline: none;
   }
   #sk_keystroke {
-    padding: 6px 10px;
+    padding: 8px 14px;
     position: fixed;
     float: right;
     bottom: 0;
@@ -266,10 +267,11 @@ settings.theme = `
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 8px 0 0 0;
     color: #e2e0f0;
+    font-size: 15px;
   }
 
-  /* ── Usage / Popup / Editor ─────────────────────────────── */
-  #sk_usage, #sk_popup, #sk_editor {
+  /* ── Usage / Popup ──────────────────────────────────────── */
+  #sk_usage, #sk_popup {
     overflow: auto;
     position: fixed;
     width: 80%;
@@ -284,8 +286,60 @@ settings.theme = `
     border-radius: 12px;
     box-shadow: 0 12px 48px rgba(0,0,0,0.5);
     z-index: 2147483298;
-    padding: 1rem;
+    padding: 1.4rem;
     color: #e2e0f0;
+  }
+
+  /* ── Editor (vim insert mode — I key) ───────────────────── */
+  #sk_editor {
+    overflow: auto;
+    position: fixed;
+    width: 80%;
+    max-height: 80%;
+    top: 10%;
+    left: 10%;
+    text-align: left;
+    background: rgba(18, 16, 30, 0.72) !important;
+    backdrop-filter: blur(28px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(1.5) !important;
+    border: 1px solid rgba(196, 167, 231, 0.20) !important;
+    border-radius: 12px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+    z-index: 2147483298;
+    padding: 1.4rem;
+    color: #e2e0f0 !important;
+  }
+  /* Force all text inside the editor to be legible */
+  #sk_editor * {
+    color: #e2e0f0 !important;
+    background-color: transparent !important;
+  }
+  /* Ace editor inside vim insert mode */
+  #sk_editor .ace_editor {
+    background: rgba(18, 16, 30, 0.0) !important;
+    color: #e2e0f0 !important;
+  }
+  #sk_editor .ace_gutter {
+    background: rgba(255,255,255,0.04) !important;
+    color: #9893b0 !important;
+    border-right: 1px solid rgba(255,255,255,0.08) !important;
+  }
+  #sk_editor .ace_gutter-active-line {
+    background: rgba(232, 143, 199, 0.10) !important;
+  }
+  #sk_editor .ace_cursor {
+    color: #e88fc7 !important;
+    border-left-color: #e88fc7 !important;
+  }
+  #sk_editor .ace_selection, #sk_editor .ace_selected-word {
+    background: rgba(196, 167, 231, 0.20) !important;
+    border: 1px solid rgba(196, 167, 231, 0.35) !important;
+  }
+  #sk_editor .ace_active-line {
+    background: rgba(255,255,255,0.04) !important;
+  }
+  #sk_editor .ace_line {
+    color: #e2e0f0 !important;
   }
   #sk_nvim {
     position: fixed;
@@ -315,19 +369,19 @@ settings.theme = `
   }
   #sk_usage span.annotation {
     padding-left: 32px;
-    line-height: 22px;
+    line-height: 26px;
   }
   #sk_usage * {
-    font-size: 10pt;
+    font-size: 12pt;
   }
 
   /* ── Kbd ────────────────────────────────────────────────── */
   kbd {
     white-space: nowrap;
     display: inline-block;
-    padding: 3px 5px;
-    font: 11px 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
-    line-height: 10px;
+    padding: 4px 7px;
+    font: 13px 'JetBrains Mono', 'JetBrainsMonoNL Nerd Font', 'JetBrainsMono NF Regular';
+    line-height: 13px;
     vertical-align: middle;
     background: rgba(255,255,255,0.07);
     border: solid 1px rgba(255,255,255,0.12);
@@ -488,6 +542,45 @@ settings.theme = `
   .ace_editor.ace_autocomplete {
     z-index: 2147483300 !important;
     width: 80% !important;
+    background: rgba(20, 18, 32, 0.90) !important;
+    color: #e2e0f0 !important;
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  /* Ace editor — vim insert mode */
+  .ace_editor {
+    background: rgba(20, 18, 32, 0.88) !important;
+    color: #e2e0f0 !important;
+  }
+  .ace_gutter {
+    background: rgba(16, 14, 28, 0.85) !important;
+    color: #9893b0 !important;
+  }
+  .ace_gutter-active-line {
+    background: rgba(232, 143, 199, 0.08) !important;
+  }
+  .ace_marker-layer .ace_active-line {
+    background: rgba(196, 167, 231, 0.07) !important;
+  }
+  .ace_cursor {
+    color: #e88fc7 !important;
+    border-left-color: #e88fc7 !important;
+  }
+  .ace_selection {
+    background: rgba(196, 167, 231, 0.20) !important;
+  }
+  /* Insert mode status indicator */
+  #sk_editor {
+    background: rgba(20, 18, 32, 0.88);
+    color: #e2e0f0;
+  }
+  /* Vim insert / visual mode banner shown at bottom */
+  #sk_banner, .sk_insert_mode {
+    background: rgba(20, 18, 32, 0.84) !important;
+    color: #e2e0f0 !important;
+    border-color: rgba(255,255,255,0.09) !important;
   }
 
   /* ── Mobile ─────────────────────────────────────────────── */
@@ -505,5 +598,33 @@ settings.theme = `
       margin: 0;
       padding: 0.2rem;
     }
+  }
+
+  /* ── Vim insert mode indicator (the bar shown when pressing I) ── */
+  /* SurfingKeys renders this as #sk_status with mode text,         */
+  /* or as an <input> inside a themed container. Force dark styles  */
+  /* on any element that may carry white backgrounds in insert mode. */
+  #sk_status[style*="background"],
+  #sk_status {
+    background: rgba(20, 18, 32, 0.86) !important;
+    color: #e2e0f0 !important;
+  }
+  /* The insert-mode edit field rendered by sk_editor */
+  #sk_editor textarea,
+  #sk_editor input {
+    background: rgba(20, 18, 32, 0.88) !important;
+    color: #e2e0f0 !important;
+    caret-color: #e88fc7 !important;
+    border: 1px solid rgba(196, 167, 231, 0.25) !important;
+    border-radius: 6px !important;
+    outline: none !important;
+  }
+  /* Override any injected inline white backgrounds on iframes/containers */
+  .sk_theme[style],
+  #sk_frame {
+    background: rgba(20, 18, 32, 0.86) !important;
+    color: #e2e0f0 !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 `;
